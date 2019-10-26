@@ -1,0 +1,52 @@
+module LinkedList
+  class Node
+    attr_accessor :value, :next_node
+
+    def initialize(value, next_node)
+      @value = value
+      @next_node = next_node
+    end
+  end
+
+  class Stack
+    attr_accessor :first
+
+    def initialize
+      @first = nil
+    end
+
+    def push(value)
+      @first = Node.new(value, @first)
+    end
+    alias_method :"<<", :push
+
+    def is_empty?
+      @first.nil?
+    end
+
+    def pop
+      if @first != nil
+      value = @first.value
+      @first = @first.next_node
+      puts value
+      end
+    end
+  end
+end
+
+    def reverse_list(list)
+      
+      while list.first != nil
+        list.pop
+      end
+    end
+
+stack = LinkedList::Stack.new
+
+stack << "mentor"
+stack << "good"
+stack << "Is a"
+stack << "Blake"
+
+reverse_list(stack)
+
