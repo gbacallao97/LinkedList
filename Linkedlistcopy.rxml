@@ -40,10 +40,6 @@ end
 node1 = LinkedListNode.new("linked")
 node2 = LinkedListNode.new("list", node1)
 node3 = LinkedListNode.new("part", node2)
-node1.next_node = node3
+# node1.next_node = node3
 
-print_values(node3)
-puts "---------"
-reverse_list(node3)
-print_values(node1)
-
+puts is_infinite?(node3)
